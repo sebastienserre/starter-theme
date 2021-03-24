@@ -188,13 +188,13 @@ function add_font_awesome_5_cdn_attributes( $html, $handle ) {
 }
 add_filter( 'style_loader_tag', 'add_font_awesome_5_cdn_attributes', 10, 2 );
 
-add_action( 'init', 'create_nav_menu' );
-function create_nav_menu() {
-	register_nav_menus(
-		array(
-			'vertical'     => __( 'Vertical', 'nd-grace' ),
-			'social'       => __( 'Social Network', 'nd-grace' ),
-			'footer'       => __( 'Footer', 'nd-grace' ),
-		)
-	);
+add_action( 'after_setup_theme', 'starter_load_files' );
+function starter_load_files() {
+	$files = scandir( get_stylesheet_directory() . '/inc/' );
+	$files = array_diff( $files, array( 'jetpack.php', 'woocommerce.php' ) );
+	foreach ( $files as $file ) {
+		if ( is_file( get_stylesheet_directory() . '/inc/' . $file ) ) {
+			require_once get_stylesheet_directory() . '/inc/' . $file;
+		}
+	}
 }
