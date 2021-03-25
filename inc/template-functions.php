@@ -2,7 +2,7 @@
 /**
  * Functions which enhance the theme by hooking into WordPress
  *
- * @package Paroisse_Albi_2021
+ * @package Starter_ Theme
  */
 
 /**

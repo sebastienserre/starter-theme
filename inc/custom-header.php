@@ -8,7 +8,7 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package Paroisse_Albi_2021
+ * @package Starter_ Theme
  */
 
 /**

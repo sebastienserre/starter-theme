@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Paroisse_Albi_2021
+ * @package Starter_ Theme
  */
 
 ?>

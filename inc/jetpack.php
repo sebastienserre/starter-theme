@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package Paroisse_Albi_2021
+ * @package Starter_ Theme
  */
 
 /**

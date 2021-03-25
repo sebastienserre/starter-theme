@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package Paroisse_Albi_2021
+ * @package Starter_ Theme
  */
 
 get_header();

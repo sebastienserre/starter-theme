@@ -1,8 +1,8 @@
 <?php
 /**
- * Paroisse Albi 2021 Theme Customizer
+ * Starter Theme Theme Customizer
  *
- * @package Paroisse_Albi_2021
+ * @package Starter_ Theme
  */
 
 /**

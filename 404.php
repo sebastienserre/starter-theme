@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package Paroisse_Albi_2021
+ * @package Starter_ Theme
  */
 
 get_header();

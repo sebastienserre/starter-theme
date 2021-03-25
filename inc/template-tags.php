@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package Paroisse_Albi_2021
+ * @package Starter_ Theme
  */
 
 if ( ! function_exists( 'starter_theme_posted_on' ) ) :
