@@ -4,8 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6bee1d58df2369c64e63ca605c26aa7f",
+    "content-hash": "dfc840c241bdc190a65d3a50a7bd7dca",
     "packages": [
+        {
+            "name": "beaver/bb-plugin-pro",
+            "version": "1.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://composer.thivinfo.com/beaver/bb-plugin-pro_1.0.zip"
+            },
+            "require": {
+                "composer/installers": "^1.5"
+            },
+            "type": "wordpress-plugin"
+        },
         {
             "name": "composer/installers",
             "version": "v1.10.0",
@@ -161,7 +173,10 @@
                 "type": "zip",
                 "url": "https://composer.thivinfo.com/gf/gravityforms_2.4.23.3.zip"
             },
-            "type": "plugins"
+            "require": {
+                "composer/installers": "^1.5"
+            },
+            "type": "wordpress-plugin"
         },
         {
             "name": "wpackagist-plugin/advanced-custom-fields-font-awesome",
