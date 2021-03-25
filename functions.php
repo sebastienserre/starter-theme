@@ -1,10 +1,10 @@
 <?php
 /**
- * Paroisse Albi 2021 functions and definitions
+ * Starter Theme functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Paroisse_Albi_2021
+ * @package Starter_ Theme
  */
 
 if ( ! defined( '_S_VERSION' ) ) {
@@ -24,7 +24,7 @@ if ( ! function_exists( 'starter_theme_setup' ) ) :
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on Paroisse Albi 2021, use a find and replace
+		 * If you're building a theme based on Starter Theme, use a find and replace
 		 * to change 'starter-theme' to the name of your theme in all the template files.
 		 */
 		load_theme_textdomain( 'starter-theme', get_template_directory() . '/languages' );
@@ -173,13 +173,6 @@ require get_template_directory() . '/inc/template-functions.php';
  */
 require get_template_directory() . '/inc/customizer.php';
 
-/**
- * Load Jetpack compatibility file.
- */
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
-}
-
 function add_font_awesome_5_cdn_attributes( $html, $handle ) {
 	if ( 'fontawesome' === $handle ) {
 		return str_replace( "media='all'", "crossorigin='anonymous'", $html );
@@ -191,7 +184,19 @@ add_filter( 'style_loader_tag', 'add_font_awesome_5_cdn_attributes', 10, 2 );
 add_action( 'after_setup_theme', 'starter_load_files' );
 function starter_load_files() {
 	$files = scandir( get_template_directory() . '/inc/' );
+
+	// remove optional class
 	$files = array_diff( $files, array( 'jetpack.php', 'woocommerce.php' ) );
+
+	// reload optional class if needed
+	if ( class_exists( 'WooCommerce' ) ) {
+		$files[] = 'woocommerce.php';
+	}
+	if ( defined( 'JETPACK__VERSION' ) ){
+		$files[] = 'jetpack.php';
+	}
+
+	//Load files
 	foreach ( $files as $file ) {
 		if ( is_file( get_template_directory() . '/inc/' . $file ) ) {
 			require_once get_template_directory() . '/inc/' . $file;
