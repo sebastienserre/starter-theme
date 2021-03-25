@@ -190,11 +190,11 @@ add_filter( 'style_loader_tag', 'add_font_awesome_5_cdn_attributes', 10, 2 );
 
 add_action( 'after_setup_theme', 'starter_load_files' );
 function starter_load_files() {
-	$files = scandir( get_stylesheet_directory() . '/inc/' );
+	$files = scandir( get_template_directory() . '/inc/' );
 	$files = array_diff( $files, array( 'jetpack.php', 'woocommerce.php' ) );
 	foreach ( $files as $file ) {
-		if ( is_file( get_stylesheet_directory() . '/inc/' . $file ) ) {
-			require_once get_stylesheet_directory() . '/inc/' . $file;
+		if ( is_file( get_template_directory() . '/inc/' . $file ) ) {
+			require_once get_template_directory() . '/inc/' . $file;
 		}
 	}
 }
