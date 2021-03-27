@@ -18,8 +18,10 @@
         "php": ">=5.6",
         "wpackagist-plugin/advanced-custom-fields-font-awesome": "*",
         "gf/gravityforms": "^2.4.23.3",
-        "beaver/bb-plugin-pro": "1.0"
+        "beaver/bb-plugin-pro": "1.0",
+        "afragen/github-updater": "^9"
     },
+    "minimum-stability": "dev",
     "repositories": {
         "0": {
             "type": "composer",
@@ -32,6 +34,17 @@
         "1": {
             "type": "composer",
             "url": "https://composer.thivinfo.com/"
+        },
+        "2":         {
+            "type": "package",
+            "package": {
+                "name": "afragen/github-updater",
+                "type": "wordpress-plugin",
+                "version": "0",
+                "require": {
+                    "composer/installers": "^1"
+                }
+            }
         }
     },
     "require-dev": {
