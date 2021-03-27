@@ -1,9 +1,22 @@
 <?php
+
+namespace StarterTheme\Acf;
+
+use function apply_filters;
+use function content_url;
+use function fclose;
+use function file_exists;
+use function fwrite;
+use function ob_get_clean;
+use function ob_start;
+use function sanitize_title;
+use function wp_enqueue_style;
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 } // Exit if accessed directly.
 
-add_action( 'after_setup_theme', 'starter_theme_load_acf', 9999 );
+add_action( 'after_setup_theme', 'StarterTheme\Acf\starter_theme_load_acf', 9999 );
 function starter_theme_load_acf() {
 
 	if ( function_exists( 'acf_add_options_sub_page' ) ) {
@@ -15,4 +28,48 @@ function starter_theme_load_acf() {
 		) );
 
 	}
+}
+
+add_action( 'acf/save_post', 'StarterTheme\Acf\create_css_file'  );
+function create_css_file ( $post_id ){
+	if ( ! function_exists( 'get_field' ) || 'options' !== $post_id ){
+		return;
+	}
+	$sitename = sanitize_title( get_bloginfo( 'name' ) );
+	$css = array();
+	$css['bg_main_menu'] = get_field( 'fond_menu_principal', 'options' );
+	$css['fond_header_footer'] = get_field( 'fond_header_footer', 'options' );
+
+
+	if ( ! file_exists( WP_CONTENT_DIR . '/theme-css/' ) ){
+		wp_mkdir_p( WP_CONTENT_DIR . '/theme-css/' );
+	}
+	$file = WP_CONTENT_DIR . '/theme-css/' . $sitename . '.css';
+
+	$generated_css = generate_css( $css );
+	$open = fopen( $file, 'w+' );
+	fwrite( $open, $generated_css );
+	fclose( $open );
+}
+
+add_action( 'wp_enqueue_scripts', 'StarterTheme\Acf\enqueue_style' );
+function enqueue_style() {
+	$sitename = sanitize_title( get_bloginfo( 'name' ) );
+	$url  = content_url( '/theme-css/' . $sitename . '.css' );
+	if ( file_exists( WP_CONTENT_DIR . '/theme-css/' . $sitename . '.css') ){
+		wp_enqueue_style( $sitename . '-style', $url );
+	}
+}
+
+function generate_css( $css ){
+	if ( empty( $css ) ){
+		return;
+	}
+	ob_start();
+	?>
+	#primary-menu { background: <?php echo $css['bg_main_menu']; ?>	}
+    #colophon, #masthead{ background: <?php echo $css['fond_header_footer']; ?>	}
+<?php
+	$generated_css = ob_get_clean();
+	return apply_filters( 'StarterTheme\GeneratedCSS', $generated_css );
 }
