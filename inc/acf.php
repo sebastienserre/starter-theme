@@ -66,9 +66,17 @@ function generate_css( $css ){
 		return;
 	}
 	ob_start();
+	if ( ! empty( $css['bg_main_menu'] ) ){
 	?>
 	#primary-menu { background: <?php echo $css['bg_main_menu']; ?>	}
+        <?php
+    }
+	if ( ! empty( $css['fond_header_footer'] ) ){
+	    ?>
     #colophon, #masthead{ background: <?php echo $css['fond_header_footer']; ?>	}
+        <?php
+    }
+        ?>
 <?php
 	$generated_css = ob_get_clean();
 	return apply_filters( 'StarterTheme\GeneratedCSS', $generated_css );
