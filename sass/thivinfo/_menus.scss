@@ -131,26 +131,26 @@ ul.menu {
 			}
 		}
 	}
-}
 
-ul.sub-menu {
-	background: #f1f1f1;
-	display: flex;
-	justify-content: space-around;
-	min-height: 100px;
-	align-items: center;
-	margin: 0;
-}
-
-.sub-menu {
-	li {
-		margin-top: 10px;
+	ul.sub-menu {
+		background: #f1f1f1;
+		display: flex;
+		justify-content: space-around;
+		min-height: 100px;
+		align-items: center;
+		margin: 0;
 	}
 
-	a {
+	.sub-menu {
+		li {
+			margin-top: 10px;
+		}
 
-		& :hover {
-			text-decoration: underline;
+		a {
+
+			& :hover {
+				text-decoration: underline;
+			}
 		}
 	}
 }

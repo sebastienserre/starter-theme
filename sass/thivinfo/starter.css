@@ -97,8 +97,7 @@ ul.menu {
 .main-navigation .sub-menu a:active, .main-navigation .sub-menu a:focus, .main-navigation .sub-menu a:hover {
   text-decoration: underline;
 }
-
-ul.sub-menu {
+.main-navigation ul.sub-menu {
   background: #f1f1f1;
   display: flex;
   justify-content: space-around;
@@ -106,11 +105,10 @@ ul.sub-menu {
   align-items: center;
   margin: 0;
 }
-
-.sub-menu li {
+.main-navigation .sub-menu li {
   margin-top: 10px;
 }
-.sub-menu a :hover {
+.main-navigation .sub-menu a :hover {
   text-decoration: underline;
 }
 
