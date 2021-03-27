@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Main Menu */
 ul.menu {
   list-style: none;
@@ -348,6 +349,21 @@ Responsive
 
 #primary {
   min-height: calc(100vh - 440px);
+}
+
+blockquote {
+  margin-left: 60px;
+}
+blockquote:before {
+  content: "";
+  font-family: "dashicons";
+  display: block;
+  font-size: 3rem;
+  height: 0;
+  left: -60px;
+  position: relative;
+  top: -10px;
+  color: #f2f2f2;
 }
 
 .header-container {

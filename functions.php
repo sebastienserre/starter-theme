@@ -142,6 +142,7 @@ add_action( 'widgets_init', 'starter_theme_widgets_init' );
 function starter_theme_scripts() {
 	wp_enqueue_style( 'albi-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_enqueue_style( 'starter-style', get_template_directory_uri() . '/sass/thivinfo/starter.css', array( 'albi-style' ),_S_VERSION );
+	wp_enqueue_style( 'dashicons', '', array( 'starter-style' ) );
 	wp_style_add_data( 'albi-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'albi-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
