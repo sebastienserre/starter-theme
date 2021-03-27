@@ -1,0 +1,10 @@
+#primary,
+.header-container,
+.footer-container{
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+#primary {
+	min-height: calc(100vh - 440px);
+}

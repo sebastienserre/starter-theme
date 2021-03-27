@@ -7,6 +7,8 @@ ul.menu {
   position: relative;
   justify-content: center;
   background: #000000;
+  min-height: 40px;
+  line-height: 40px;
 }
 #primary-menu > li {
   min-width: 200px;
@@ -45,7 +47,6 @@ ul.menu {
   opacity: 0;
   transition: opacity 0.3s ease;
   left: 0;
-  width: 100%;
 }
 .main-navigation ul ul ul {
   top: 0;
@@ -90,7 +91,7 @@ ul.menu {
   justify-content: space-around;
 }
 .main-navigation .sub-menu a {
-  color: #ffffff;
+  color: #000000;
   font-size: 1rem;
 }
 .main-navigation .sub-menu a:active, .main-navigation .sub-menu a:focus, .main-navigation .sub-menu a:hover {
@@ -103,9 +104,6 @@ ul.sub-menu {
   justify-content: space-around;
   min-height: 100px;
   align-items: center;
-  /*width: 193%;*/
-  top: 100%;
-  /*left: -459px;*/
   margin: 0;
 }
 
@@ -342,6 +340,28 @@ Responsive
     width: 100%;
     margin: 0 auto;
   }
+}
+#primary,
+.header-container,
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#primary {
+  min-height: calc(100vh - 440px);
+}
+
+.header-container {
+  display: flex;
+}
+
+#masthead {
+  height: 210px;
+}
+
+#colophon {
+  height: 210px;
 }
 
 /*# sourceMappingURL=starter.css.map */
