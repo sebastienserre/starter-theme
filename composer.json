@@ -36,15 +36,8 @@
             "url": "https://composer.thivinfo.com/"
         },
         "2":         {
-            "type": "package",
-            "package": {
-                "name": "afragen/github-updater",
-                "type": "wordpress-plugin",
-                "version": "0",
-                "require": {
-                    "composer/installers": "^1"
-                }
-            }
+            "type": "vcs",
+            "url": "https://github.com/afragen/github-updater"
         }
     },
     "require-dev": {
