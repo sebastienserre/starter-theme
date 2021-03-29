@@ -54,7 +54,7 @@ function create_css_file ( $post_id ){
 
 add_action( 'wp_enqueue_scripts', 'StarterTheme\Acf\enqueue_style' );
 function enqueue_style() {
-	$sitename = sanitize_title( get_bloginfo( 'name' ) );
+    	$sitename = sanitize_title( get_bloginfo( 'name' ) );
 	$url  = content_url( '/theme-css/' . $sitename . '.css' );
 	if ( file_exists( WP_CONTENT_DIR . '/theme-css/' . $sitename . '.css') ){
 		wp_enqueue_style( $sitename . '-style', $url );

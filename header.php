@@ -28,6 +28,9 @@
 
     <header id="masthead" class="site-header">
         <div class="header-container">
+            <?php
+            echo render_social_menu();
+            ?>
             <div class="site-branding">
 				<?php
 				the_custom_logo();
