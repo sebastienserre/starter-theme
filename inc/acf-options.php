@@ -122,8 +122,8 @@ if( function_exists('acf_add_local_field_group') ):
 			),
 			array(
 				'key' => 'field_605f16aa7ccd8',
-				'label' => 'Fond Menu Principal',
-				'name' => 'fond_menu_principal',
+				'label' => 'Fond Menu',
+				'name' => 'fond_menu',
 				'type' => 'color_picker',
 				'instructions' => '',
 				'required' => 0,
@@ -168,14 +168,6 @@ if( function_exists('acf_add_local_field_group') ):
 		'hide_on_screen' => '',
 		'active' => true,
 		'description' => '',
-		'acfe_display_title' => '',
-		'acfe_autosync' => array(
-			0 => 'php',
-			1 => 'json',
-		),
-		'acfe_form' => 0,
-		'acfe_meta' => '',
-		'acfe_note' => '',
 	));
 
 endif;

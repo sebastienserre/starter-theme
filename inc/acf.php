@@ -37,7 +37,7 @@ function create_css_file ( $post_id ){
 	}
 	$sitename = sanitize_title( get_bloginfo( 'name' ) );
 	$css = array();
-	$css['bg_main_menu'] = get_field( 'fond_menu_principal', 'options' );
+	$css['bg_menu'] = get_field( 'fond_menu', 'options' );
 	$css['fond_header_footer'] = get_field( 'fond_header_footer', 'options' );
 
 
@@ -66,9 +66,9 @@ function generate_css( $css ){
 		return;
 	}
 	ob_start();
-	if ( ! empty( $css['bg_main_menu'] ) ){
+	if ( ! empty( $css['bg_menu'] ) ){
 	?>
-	#primary-menu { background: <?php echo $css['bg_main_menu']; ?>	}
+	#primary-menu, .menu-vertical-container ul li a { background: <?php echo $css['bg_menu']; ?>	}
         <?php
     }
 	if ( ! empty( $css['fond_header_footer'] ) ){
