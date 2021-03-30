@@ -418,4 +418,9 @@ blockquote:before {
   text-decoration: none;
 }
 
+#secondary {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 /*# sourceMappingURL=starter.css.map */
