@@ -27,10 +27,10 @@
        href="#primary"><?php esc_html_e( 'Skip to content', 'starter-theme' ); ?></a>
 
     <header id="masthead" class="site-header">
+	    <?php
+	    echo render_social_menu();
+	    ?>
         <div class="header-container">
-            <?php
-            echo render_social_menu();
-            ?>
             <div class="site-branding">
 				<?php
 				the_custom_logo();

@@ -17,6 +17,7 @@
     "require": {
         "php": ">=5.6",
         "wpackagist-plugin/advanced-custom-fields-font-awesome": "*",
+        "wpackagist-plugin/really-simple-ssl": "*",
         "gf/gravityforms": "^2.4.23.3",
         "beaver/bb-plugin-pro": "1.0",
         "afragen/github-updater": "^9"
@@ -57,7 +58,7 @@
     },
     "extra": {
         "installer-paths": {
-            "/app/wp-content/plugins/{$name}/": [
+            "./../../plugins/{$name}/": [
                 "type:wordpress-plugin"
             ]
         }

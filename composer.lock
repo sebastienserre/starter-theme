@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e9bcf9b4f9fd6a81aff842e3b790b2a5",
+    "content-hash": "5af2abcb809127252d256fb62e26826e",
     "packages": [
         {
             "name": "afragen/github-updater",
@@ -445,6 +445,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/advanced-custom-fields-font-awesome/"
+        },
+        {
+            "name": "wpackagist-plugin/really-simple-ssl",
+            "version": "4.0.13",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/really-simple-ssl/",
+                "reference": "tags/4.0.13"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/really-simple-ssl.4.0.13.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/really-simple-ssl/"
         }
     ],
     "packages-dev": [
@@ -3460,12 +3478,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "fe68f36c6f38613b56e34f48fc29aa5e64d817b0"
+                "reference": "3decd5ef0eb3a9c688f0dc29bd832b8bc3af4406"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/fe68f36c6f38613b56e34f48fc29aa5e64d817b0",
-                "reference": "fe68f36c6f38613b56e34f48fc29aa5e64d817b0",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/3decd5ef0eb3a9c688f0dc29bd832b8bc3af4406",
+                "reference": "3decd5ef0eb3a9c688f0dc29bd832b8bc3af4406",
                 "shasum": ""
             },
             "require": {
@@ -3509,7 +3527,7 @@
                 "source": "https://github.com/squizlabs/PHP_CodeSniffer",
                 "wiki": "https://github.com/squizlabs/PHP_CodeSniffer/wiki"
             },
-            "time": "2021-03-29T04:18:37+00:00"
+            "time": "2021-03-30T00:02:48+00:00"
         },
         {
             "name": "symfony/config",

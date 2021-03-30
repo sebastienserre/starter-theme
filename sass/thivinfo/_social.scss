@@ -16,7 +16,10 @@
 
 .social-network{
 	display: flex;
-	margin-top: 10px;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 10px 0;
+	justify-content: right;
 	input[type="submit"] {
 		padding: 0 6px;
 	}
