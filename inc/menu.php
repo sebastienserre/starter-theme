@@ -16,7 +16,9 @@ function create_nav_menu() {
 add_filter( 'wp_nav_menu_objects', 'cot_wp_nav_menu_items', 10, 2 );
 
 function cot_wp_nav_menu_items( $items, $args ) {
-
+	if ( ! function_exists( 'get_field' ) ){
+		return;
+	}
 	foreach ( $items as $item ) {
 		$icon = get_field( 'footer_menu_icon', $item );
 		// append icon
