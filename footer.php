@@ -35,7 +35,7 @@
             <span class="sep"> | </span>
 			<?php
 			/* translators: 1: Theme name, 2: Theme author. */
-			printf( esc_html__( 'Theme: %1$s by %2$s.', 'starter-theme' ), 'starter-theme', '<a href="https://thivinfo.com">thivinfo.com</a>' );
+			printf( esc_html__( 'Created by %1$s.', 'starter-theme' ), '<a href="https://thivinfo.com">thivinfo.com</a>' );
 			?>
         </div><!-- .site-info -->
     </div> <!--.footer-container-->

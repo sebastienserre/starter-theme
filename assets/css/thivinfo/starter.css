@@ -367,6 +367,10 @@ blockquote:before {
   color: #f2f2f2;
 }
 
+.post, .page {
+  margin: 0;
+}
+
 .header-container {
   display: flex;
 }
@@ -375,8 +379,9 @@ blockquote:before {
   height: 210px;
 }
 
-#colophon {
-  height: 210px;
+#colophon .site-info {
+  margin: 0 auto;
+  text-align: center;
 }
 
 .fab.fa-twitter {
