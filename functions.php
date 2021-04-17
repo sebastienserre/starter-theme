@@ -155,15 +155,6 @@ function starter_theme_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	// Conditionally Load OwlCaroussel
-	if ( is_home() || is_front_page() ){
-		wp_enqueue_script( 'owlJS', get_template_directory_uri() . '/assets/owlcarousel/owl.carousel.min.js', array(
-			'jquery'), '2.3.4' );
-		wp_enqueue_style( 'owlCSS', get_template_directory_uri() . '/assets/owlcarousel/assets/owl.carousel.min.css',
-			array( 'albi-style', 'albi-navigation' ) );
-		wp_enqueue_style( 'owlthemeCSS', get_template_directory_uri() . '/assets/owlcarousel/assets/owl.theme.default.min.css',
-			array( 'albi-style', 'albi-navigation', 'owlCSS' ) );
-	}
 }
 add_action( 'wp_enqueue_scripts', 'starter_theme_scripts' );
 
