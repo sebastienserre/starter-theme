@@ -66,6 +66,7 @@ ul.menu {
   min-width: 200px;
 }
 .main-navigation ul li:hover > ul, .main-navigation ul li.focus > ul {
+  left: 0;
   opacity: 1;
   z-index: 99;
 }
@@ -105,6 +106,7 @@ ul.menu {
   min-height: 100px;
   align-items: center;
   margin: 0;
+  width: 100%;
 }
 .main-navigation .sub-menu li {
   margin-top: 10px;
@@ -118,6 +120,9 @@ ul.menu {
   background: inherit;
 }
 
+/**
+Responsive
+ */
 @media screen and (max-width: 600px) {
   .nav-is-sticky .main-navigation {
     display: block;

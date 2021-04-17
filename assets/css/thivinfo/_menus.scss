@@ -70,6 +70,7 @@ ul.menu {
 			}
 		}
 
+
 		&li.focus {
 			> ul {
 				left: 0;
@@ -81,7 +82,7 @@ ul.menu {
 			&:hover,
 			&.focus{
 				> ul {
-					//  left: 0;
+					left: 0;
 					opacity: 1;
 					z-index: 99;
 				}
@@ -139,6 +140,7 @@ ul.menu {
 		min-height: 100px;
 		align-items: center;
 		margin: 0;
+		width: 100%;
 	}
 
 	.sub-menu {
@@ -161,6 +163,10 @@ ul.menu {
 		background: inherit;
 	}
 }
+
+/**
+Responsive
+ */
 
 @media screen and (max-width: 600px) {
 	.nav-is-sticky {
