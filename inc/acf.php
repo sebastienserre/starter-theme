@@ -68,7 +68,7 @@ function generate_css( $css ){
 	ob_start();
 	if ( ! empty( $css['bg_menu'] ) ){
 	?>
-	#primary-menu, .menu-vertical-container ul li a { background: <?php echo $css['bg_menu']; ?>	}
+	#primary-menu, .menu-vertical-container ul li a, .message { background: <?php echo $css['bg_menu']; ?>	}
         <?php
     }
 	if ( ! empty( $css['fond_header_footer'] ) ){
