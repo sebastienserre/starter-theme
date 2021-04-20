@@ -34,6 +34,9 @@
             <div class="site-branding">
 				<?php
 				the_custom_logo();
+				?>
+                <div class="site-info">
+		            <?php
 				if ( is_front_page() && is_home() ) :
 					?>
                     <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"
@@ -50,6 +53,7 @@
 					?>
                     <p class="site-description"><?php echo $starter_theme_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 						?></p>
+                </div>
 				<?php endif; ?>
             </div><!-- .site-branding -->
         </div> <!-- .header-container -->

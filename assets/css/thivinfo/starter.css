@@ -376,12 +376,21 @@ blockquote:before {
   margin: 0;
 }
 
-.header-container {
+.header-container,
+.site-branding {
   display: flex;
 }
 
 #masthead {
   height: 210px;
+}
+
+.custom-logo {
+  width: 130px !important;
+}
+
+.site-info {
+  padding-left: 20px;
 }
 
 #colophon .site-info {
