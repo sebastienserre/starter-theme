@@ -133,7 +133,7 @@ if( function_exists('acf_add_local_field_group') ):
 					'class' => '',
 					'id' => '',
 				),
-				'default_value' => '',
+				'default_value' => '#F95738',
 			),
 			array(
 				'key' => 'field_605f16e27ccd9',
@@ -148,7 +148,7 @@ if( function_exists('acf_add_local_field_group') ):
 					'class' => '',
 					'id' => '',
 				),
-				'default_value' => '',
+				'default_value' => '#F9E5DC',
 			),
 		),
 		'location' => array(
