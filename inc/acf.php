@@ -90,7 +90,8 @@ function generate_css( $css ){
         .menu-vertical-container ul li a,
         .message a,
         .published-date a,
-        .sub-menu a
+        .sub-menu a,
+        .grid-news .article .published-date
         {
         color: <?php echo
         $css['link-color']; ?>
