@@ -137,10 +137,11 @@ if( function_exists('acf_add_local_field_group') ):
 			),
 			array(
 				'key' => 'field_605f16e27ccd9',
-				'label' => 'Fond du Header et du footer',
-				'name' => 'fond_header_footer',
+				'label' => 'Couleur des liens sur le fond choisi',
+				'name' => 'link-color',
 				'type' => 'color_picker',
-				'instructions' => 'Couleur de fond de l\'entête et pied de page',
+				'instructions' => 'Couleur des liens sur la couleur de fond choisi.
+Attention au manque de contraste entre les couleurs',
 				'required' => 0,
 				'conditional_logic' => 0,
 				'wrapper' => array(
@@ -168,6 +169,11 @@ if( function_exists('acf_add_local_field_group') ):
 		'hide_on_screen' => '',
 		'active' => true,
 		'description' => '',
+		'acfe_display_title' => '',
+		'acfe_autosync' => '',
+		'acfe_form' => 0,
+		'acfe_meta' => '',
+		'acfe_note' => '',
 	));
 
 endif;

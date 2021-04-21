@@ -393,6 +393,9 @@ blockquote:before {
   padding-left: 20px;
 }
 
+#colophon {
+  padding-top: 20px;
+}
 #colophon .site-info {
   margin: 0 auto;
   text-align: center;

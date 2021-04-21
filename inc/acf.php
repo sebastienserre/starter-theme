@@ -38,7 +38,7 @@ function create_css_file ( $post_id ){
 	$sitename = sanitize_title( get_bloginfo( 'name' ) );
 	$css = array();
 	$css['bg_menu'] = get_field( 'fond_menu', 'options' );
-	$css['fond_header_footer'] = get_field( 'fond_header_footer', 'options' );
+	$css['link-color'] = get_field( 'link-color', 'options' );
 
 
 	if ( ! file_exists( WP_CONTENT_DIR . '/theme-css/' ) ){
@@ -66,14 +66,35 @@ function generate_css( $css ){
 		return;
 	}
 	ob_start();
-	if ( ! empty( $css['bg_menu'] ) ){
-	?>
-	#primary-menu, .menu-vertical-container ul li a, .message, .published-date { background: <?php echo $css['bg_menu']; ?>	}
-        <?php
-    }
-	if ( ! empty( $css['fond_header_footer'] ) ){
+	if ( ! empty( $css['bg_menu'] ) ) {
+		?>
+        #primary-menu,
+        .menu-vertical-container ul li a,
+        .message,
+        .published-date,
+        .main-navigation ul.sub-menu
+        {
+        background: <?php echo
+		$css['bg_menu']; ?>
+        }
+
+        #colophon {
+        border-top: 3px solid <?php echo
+		$css['bg_menu']; ?>;
+        }
+		<?php
+	}
+	if ( ! empty( $css['link-color'] ) ){
 	    ?>
-    #colophon, #masthead{ background: <?php echo $css['fond_header_footer']; ?>	}
+        #primary-menu a,
+        .menu-vertical-container ul li a,
+        .message a,
+        .published-date a,
+        .sub-menu a
+        {
+        color: <?php echo
+        $css['link-color']; ?>
+        }
         <?php
     }
         ?>
