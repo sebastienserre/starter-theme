@@ -395,6 +395,7 @@ blockquote:before {
 
 #colophon {
   padding-top: 20px;
+  margin-top: 40px;
 }
 #colophon .site-info {
   margin: 0 auto;
