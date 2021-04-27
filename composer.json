@@ -20,6 +20,7 @@
         "wpackagist-plugin/really-simple-ssl": "*",
         "gf/gravityforms": "^2.4.23.3",
         "beaver/bb-plugin-pro": "1.0",
+        "acf/advanced-custom-fields-pro": "^5.9.5"
     },
     "minimum-stability": "dev",
     "repositories": {
@@ -34,10 +35,6 @@
         "1": {
             "type": "composer",
             "url": "https://composer.thivinfo.com/"
-        },
-        "2":         {
-            "type": "vcs",
-            "url": "https://github.com/afragen/github-updater"
         }
     },
     "require-dev": {
