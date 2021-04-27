@@ -20,7 +20,6 @@
         "wpackagist-plugin/really-simple-ssl": "*",
         "gf/gravityforms": "^2.4.23.3",
         "beaver/bb-plugin-pro": "1.0",
-        "afragen/github-updater": "^9"
     },
     "minimum-stability": "dev",
     "repositories": {
