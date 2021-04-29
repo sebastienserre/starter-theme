@@ -1,15 +1,20 @@
 .header-container,
 .site-branding{
 	display: flex;
+	min-height: 120px;
 }
 
 #masthead {
 	height: 210px;
 }
+/*
+commented for SME
+Check what's happen on Albi
+*/
 
-.custom-logo {
+/*.custom-logo {
 	width: 130px !important;
-}
+}*/
 
 .site-info {
 	padding-left: 20px;
