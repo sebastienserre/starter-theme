@@ -258,12 +258,28 @@ Vertical
 /**
 Responsive
  */
+@media screen and (max-width: 1024px) {
+  #primary-menu > li {
+    min-width: 130px;
+  }
+
+  .main-navigation {
+    font-size: 1em;
+  }
+  .main-navigation > ul > li {
+    min-width: 130px;
+  }
+}
 @media screen and (max-width: 768px) {
+  #primary-menu > li {
+    min-width: 110px;
+  }
+
   .main-navigation {
     background-color: #ffffff;
-  }
-  .main-navigation a {
-    background-color: #000000;
+    /*a {
+    	background-color: $secondary-color;
+    }*/
   }
   .main-navigation #primary-menu {
     z-index: 999;
