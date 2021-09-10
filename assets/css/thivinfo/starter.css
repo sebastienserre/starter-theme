@@ -26,7 +26,6 @@ ul.menu {
   vertical-align: middle;
   line-height: 50px;
   font-family: sans-serif;
-  font-size: 1.6rem;
 }
 .main-navigation .element-is-sticky {
   width: 100% !important;
@@ -106,7 +105,6 @@ ul.menu {
   min-height: 100px;
   align-items: center;
   margin: 0;
-  width: 100%;
 }
 .main-navigation .sub-menu li {
   margin-top: 10px;
